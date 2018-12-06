@@ -1,0 +1,58 @@
+{
+    "name": "tjgogo",
+    "displayName": "ts/js toggle",
+    "description": "switch between ts file and js file by shortcut",
+    "version": "0.0.1",
+    "publisher": "zhengtengfei",
+    "icon": "",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.tjgogo"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "keybindings": [
+            {
+                "command": "extension.tjgogo",
+                "key": "alt+o",
+                "mac": "option+o",
+                "when": "editorTextFocus && editorLangId == 'typescript'"
+            },
+            {
+                "command": "extension.tjgogo",
+                "key": "alt+o",
+                "mac": "option+o",
+                "when": "editorTextFocus && editorLangId == 'javascript'"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.tjgogo",
+                "title": "tjgogo"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "source-map-resolve": "^0.5.2",
+        "strip-json-comments": "^2.0.1"
+    }
+}
