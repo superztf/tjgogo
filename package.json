@@ -4,7 +4,7 @@
     "description": "switch between ts file and js file by shortcut",
     "version": "0.0.1",
     "publisher": "zhengtengfei",
-    "icon": "",
+    "icon": "tjgogo_icon.png",
     "engines": {
         "vscode": "^1.21.0"
     },
@@ -45,11 +45,10 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.21",
-        "tslint": "^5.8.0",
         "@types/node": "^8.10.25",
-        "@types/mocha": "^2.2.42"
+        "tslint": "^5.8.0",
+        "typescript": "^3.2.1",
+        "vscode": "^1.1.21"
     },
     "dependencies": {
         "source-map-resolve": "^0.5.2",

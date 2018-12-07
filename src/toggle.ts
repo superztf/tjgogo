@@ -82,6 +82,9 @@ export class TSJSToggle {
             return this._curfile;
         }
         if (this._mapdata) {
+            if (this._mapdata.sourceRoot) {
+                return path.join(this._mapdata.sourceRoot, this._mapdata.sources[0]);
+            }
             return path.join(this._curdir, this._mapdata.sources[0]);
         }
         if (this._rootdir) {
@@ -218,7 +221,7 @@ export class TSJSToggle {
 
 
 function searchRootPath(curdir: string): string {
-    if (vscode.workspace.rootPath) {
+    if (vscode.workspace.rootPath && curdir.startsWith(vscode.workspace.rootPath)) {
         if (fs.existsSync(path.join(vscode.workspace.rootPath, "tsconfig.json"))) {
             return vscode.workspace.rootPath;
         }
