@@ -1,5 +1,9 @@
 # tjgogo README
 
+[![Build Status](https://travis-ci.org/superztf/tjgogo.svg?branch=master)](https://travis-ci.org/superztf/tjgogo)
+[![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/superztf/tjgogo)
+[![VS Code Marketplace](https://vsmarketplacebadge.apphb.com/version-short/zhengtengfei.tjgogo.svg) ![Rating](https://vsmarketplacebadge.apphb.com/rating-short/zhengtengfei.tjgogo.svg) ![Installs](https://vsmarketplacebadge.apphb.com/installs/zhengtengfei.tjgogo.svg)](https://marketplace.visualstudio.com/items?itemName=zhengtengfei.tjgogo)
+
 This is a VSCode extension for typescript project. It help you toggle between corresponding ts/js file.
 
 ## Features
@@ -7,6 +11,8 @@ This is a VSCode extension for typescript project. It help you toggle between co
 > Default shortcut
 > * win: alt + o
 > * mac: option + o
+
+![gif](https://raw.githubusercontent.com/superztf/tjgogo/master/example.gif)
 
 ## Requirements
 

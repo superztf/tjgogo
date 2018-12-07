@@ -73,7 +73,7 @@ function tsjsgo(filepath: string, pos: RawPosition) {
                 let opts: vscode.TextDocumentShowOptions = {
                     viewColumn: page,
                     selection: range,
-                }
+                };
                 vscode.window.showTextDocument(doc, opts);
             });
         }
