@@ -8,6 +8,10 @@
     "engines": {
         "vscode": "^1.21.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/superztf/tjgogo.git"
+    },
     "categories": [
         "Other"
     ],
