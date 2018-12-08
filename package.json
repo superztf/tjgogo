@@ -2,7 +2,7 @@
     "name": "tjgogo",
     "displayName": "ts/js toggle",
     "description": "switch between ts file and js file by shortcut",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "zhengtengfei",
     "icon": "tjgogo_icon.png",
     "engines": {
@@ -56,7 +56,7 @@
         "vscode": "^1.1.21"
     },
     "dependencies": {
-        "source-map-resolve": "^0.5.2",
+        "source-map": "^0.7.3",
         "strip-json-comments": "^2.0.1"
     }
 }

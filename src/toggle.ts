@@ -179,7 +179,7 @@ export class TSJSToggle {
         var ret: FindFilePos;
         var posinfo;
         if (this._ists) {
-            const opts: sourcemap.SourceFindPosition = {
+            const opts: sourcemap.MappedPosition = {
                 source: this._mapdata.sources[0],
                 line: this._pos.line,
                 column: this._pos.column
@@ -194,7 +194,7 @@ export class TSJSToggle {
 
             ret = {
                 file: this.jsfilepath,
-                postion: { line: posinfo.line, column: posinfo.column }
+                postion: { line: posinfo.line as number, column: posinfo.column as number }
             };
         } else {
             try {
@@ -203,13 +203,14 @@ export class TSJSToggle {
             } catch{// consumer has some error.I haven't solved it perfectly. so catch...
                 try {
                     posinfo = consumer.originalPositionFor({ line: this._pos.line, column: 0xfffffff });
+                    assert(posinfo.column && posinfo.line);
                 } catch{
                     posinfo = { line: 0, column: 0 };
                 }
             }
             ret = {
                 file: this.tsfilepath,
-                postion: { line: posinfo.line, column: posinfo.column }
+                postion: { line: posinfo.line as number, column: posinfo.column as number }
             };
         }
         if (cbfunc) {
